@@ -390,6 +390,7 @@ output.elasticsearch:
             setDisableConfirmChecked(false);
           }}
           aria-labelledby="streamsWiredDisableModalTitle"
+          data-test-subj="streamsWiredDisableModal"
         >
           <EuiModalHeader>
             <EuiModalHeaderTitle id="streamsWiredDisableModalTitle">
@@ -411,6 +412,7 @@ output.elasticsearch:
               label={i18n.translate('xpack.streams.streamsSettingsFlyout.disableModalCheckbox', {
                 defaultMessage: 'I understand this will delete all data and configuration.',
               })}
+              data-test-subj="streamsWiredDisableConfirmCheckbox"
             />
           </EuiModalBody>
           <EuiModalFooter>
@@ -420,6 +422,7 @@ output.elasticsearch:
                 setDisableConfirmChecked(false);
               }}
               disabled={isDisabling}
+              data-test-subj="streamsWiredDisableCancelButton"
             >
               {i18n.translate('xpack.streams.streamsSettingsFlyout.disableModalCancel', {
                 defaultMessage: 'Cancel',
